@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO BÁSICO -->
+    <title>Procedimentos e Tratamentos | Kavanah Clínica</title>
+    <meta name="description" content="Conheça detalhadamente nossos protocolos de Estética Avançada e Integrativa em Santana, SP. Botox, Limpeza de Pele Profunda, Quiropraxia Seitai e mais.">
+    <meta name="robots" content="index, follow">
+
+    <!-- FAVICON & ESTILOS -->
+    <link rel="shortcut icon" href="src/images/logo/corpo.kavanah.icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Ícones FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        .page-header {
+            text-align: center;
+            padding: 60px 0;
+            background: var(--fundo-suave);
+            border-bottom: 1px solid rgba(203, 172, 112, 0.1);
+        }
+        .page-header h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--texto-escuro);
+            margin-bottom: 15px;
+        }
+        .tratamentos-grid-detalhada {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            padding: 60px 0;
+        }
+        .item-tratamento {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            background: var(--fundo-principal);
+            padding: 30px;
+            border-radius: 16px;
+            border: 1px solid rgba(203, 172, 112, 0.15);
+            box-shadow: 0 10px 30px rgba(92, 78, 59, 0.03);
+        }
+        .item-tratamento:nth-child(even) {
+            direction: rtl;
+        }
+        .item-tratamento:nth-child(even) .tratamento-info {
+            direction: ltr;
+        }
+        .tratamento-foto {
+            width: 100%;
+            height: 380px;
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(203, 172, 112, 0.2);
+        }
+        .tratamento-foto img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .tratamento-info h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        .tratamento-meta {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            color: var(--dourado-escuro);
+            font-weight: 600;
+        }
+        .tratamento-meta span i {
+            margin-right: 6px;
+        }
+        .tratamento-detalhes {
+            color: var(--texto-secundario);
+            margin-bottom: 30px;
+        }
+        .tratamento-detalhes p {
+            margin-bottom: 15px;
+        }
+        .tratamento-detalhes ul {
+            list-style: none;
+            padding-left: 5px;
+            margin-top: 10px;
+        }
+        .tratamento-detalhes li {
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 20px;
+        }
+        .tratamento-detalhes li::before {
+            content: "✓";
+            color: var(--dourado);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        .tratamento-action {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 1px solid var(--creme-premium);
+            padding-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 2rem;
+            }
+            .item-tratamento, .item-tratamento:nth-child(even) {
+                grid-template-columns: 1fr;
+                gap: 25px;
+                padding: 20px;
+                direction: ltr;
+            }
+            .tratamento-foto {
+                height: 240px;
+            }
+            .tratamento-info h2 {
+                font-size: 1.6rem;
+            }
+            .tratamento-action {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+            .tratamento-action .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- BOTÃO WHATSAPP -->
+    <a href="https://wa.me/5511973894158?text=Olá!%20Gostaria%20de%20mais%20informações." class="btn-whatsapp" target="_blank" rel="noopener" aria-label="Fale conosco pelo WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    </a>
+    
+    <!-- NAVBAR CORRIGIDA -->
+    <header class="navbar">
+        <nav class="container nav-container" aria-label="Menu principal">
+            <a href="index.html#home" class="nav-logo">
+                <img src="src/images/logo/LOGO.KAVANAH.SEM.FUNDO5234.svg" alt="Logotipo oficial da Kavanah Clínica">
+            </a>
+            
+            <button class="menu-toggle" aria-label="Abrir menu de navegação"><i class="fa-solid fa-bars"></i></button>
+
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Início</a></li>
+                <li><a href="index.html#about">Sobre Nós</a></li>
+                <li><a href="procedimentos.html">Procedimentos</a></li>
+                <li><a href="index.html#parceiros">Equipe</a></li>
+                <li><a href="index.html#feedbacks">Feedbacks</a></li>
+            </ul>
+
+            <!-- Grupo à Direita Corrigido -->
+            <div class="nav-right-group">
+                <div class="nav-social-icons">
+                    <a href="https://www.instagram.com/kavanahclinica/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61582549000037" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/5511973894158?text=Olá!%20Gostaria%20de%20mais%20informações." target="_blank" rel="noopener" aria-label="Whatsapp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+                <a href="index.html#contato" class="btn btn-primary nav-btn">Contatar</a>
+            </div>
+        </nav>
+    </header>
+
+    <header class="page-header">
+        <div class="container">
+            <span class="section-tag">Menu de Tratamentos</span>
+            <h1>Nossos Procedimentos</h1>
+            <p class="subtitle" style="margin-bottom: 0; margin: 0 auto;">Explore em detalhes nossos protocolos personalizados voltados para o rejuvenescimento, estética avançada e equilíbrio físico integral.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="tratamentos-grid-detalhada">
+            
+    <!-- BOTOX FACIAL -->
+    <section class="item-tratamento" style="padding: 30px; background: none;">
+        <div class="tratamento-foto">
+            <img src="src/images/tratamentos/Botox.tratamento.jpg" alt="Procedimento de aplicação de Botox Facial">
+        </div>
+        <div class="tratamento-info">
+            <span class="section-tag">Estética Facial Avançada</span>
+            <h2>Botox Facial</h2>
+            <div class="tratamento-meta">
+                <span><i class="fa-regular fa-clock"></i> Cerca de 40 min</span>
+                <span><i class="fa-regular fa-calendar"></i> Retorno incluso</span>
+            </div>
+            <div class="tratamento-detalhes">
+                <p>A aplicação da toxina botulínica é o procedimento padrão ouro para prevenção e suavização de linhas de expressão dinâmicas (como as rugas da testa, pés de galinha e glabela).</p>
+                <p><strong>Principais benefícios e indicações:</strong></p>
+                <ul>
+                    <li>Prevenção de marcas profundas e definitivas na pele.</li>
+                    <li>Aspecto descansado, rejuvenescido e inteiramente natural.</li>
+                    <li>Protocolo seguro realizado por profissional especializado.</li>
+                </ul>
+            </div>
+            <div class="tratamento-action">
+                <div>
+                    <span style="font-size: 0.85rem; color: var(--texto-secundario); display: block;">Investimento:</span>
+                    <span class="preco">R$ 289,90</span>
+                </div>
+                <a href="https://wa.me/5511973894158?text=Olá!%20Gostaria%20de%20obter%20mais%20detalhes%20e%20agendar%20uma%20avaliação%20para%20o%20procedimento%20de%20Botox%20Facial." class="btn btn-primary" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Agendar Botox
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREENCHEDORES -->
+    <section class="item-tratamento" style="padding: 30px; background: none;">
+        <div class="tratamento-foto">
+            <img src="src/images/tratamentos/Preenchedores.jpg" alt="Procedimento de preenchimento facial com ácido hialurônico">
+        </div>
+        <div class="tratamento-info">
+            <span class="section-tag">Estética Facial Avançada</span>
+            <h2>Preenchimento</h2>
+            <div class="tratamento-meta">
+                <span><i class="fa-regular fa-clock"></i> Cerca de 45 min</span>
+                <span><i class="fa-solid fa-face-smile"></i> Volumização & Contorno</span>
+            </div>
+            <div class="tratamento-detalhes">
+                <p>Utilizando o ácido hialurônico, os preenchedores devolvem o volume perdido com o envelhecimento, redefinem os contornos faciais e preenchem sulcos profundos com total naturalidade.</p>
+                <p><strong>Principais benefícios e indicações:</strong></p>
+                <ul>
+                    <li>Suavização do sulco nasogeniano (bigode chinês) e linhas de marionete.</li>
+                    <li>Aumento de volume, projeção e contorno labial de forma harmônica.</li>
+                    <li>Definição da mandíbula, queixo e sustentação das maçãs do rosto.</li>
+                </ul>
+            </div>
+            <div class="tratamento-action">
+                <div>
+                    <span style="font-size: 0.85rem; color: var(--texto-secundario); display: block;">Investimento:</span>
+                    <span class="preco">Sob Consulta</span>
+                </div>
+                <a href="https://wa.me/5511973894158?text=Olá!%20Gostaria%20de%20obter%20mais%20detalhes%20e%20agendar%20uma%20avaliação%20para%20o%20procedimento%20de%20Preenchimento." class="btn btn-primary" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Agendar Preenchimento
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BIOESTIMULADOR DE COLÁGENO -->
+    <section class="item-tratamento" style="padding: 30px; background: none;">
+        <div class="tratamento-foto">
+            <img src="src/images/tratamentos/Bioestimulador.colageno.jpg" alt="Aplicação de bioestimulador de colágeno facial para firmeza">
+        </div>
+        <div class="tratamento-info">
+            <span class="section-tag">Estética Facial Avançada</span>
+            <h2>Bioestimulador de Colágeno</h2>
+            <div class="tratamento-meta">
+                <span><i class="fa-regular fa-clock"></i> Cerca de 40 min</span>
+                <span><i class="fa-solid fa-arrow-up-trend-dots"></i> Firmeza & Sustentação</span>
+            </div>
+            <div class="tratamento-detalhes">
+                <p>Tratamento injetável que estimula as células do próprio organismo a produzirem novas fibras de colágeno, promovendo um efeito de sustentação e firmeza gradual na pele.</p>
+                <p><strong>Principais benefícios e indicações:</strong></p>
+                <ul>
+                    <li>Combate à flacidez facial e perda do contorno natural do rosto.</li>
+                    <li>Melhoria progressiva da espessura, brilho e qualidade geral da pele.</li>
+                    <li>Resultados duradouros e com aspecto natural de rejuvenescimento.</li>
+                </ul>
+            </div>
+            <div class="tratamento-action">
+                <div>
+                    <span style="font-size: 0.85rem; color: var(--texto-secundario); display: block;">Investimento:</span>
+                    <span class="preco">Sob Consulta</span>
+                </div>
+                <a href="https://wa.me/5511973894158?text=Olá!%20Gostaria%20de%20obter%20mais%20detalhes%20e%20agendar%20uma%20avaliação%20para%20o%20procedimento%20de%20Bioestimulador%20de%20Colágeno." class="btn btn-primary" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Agendar Bioestimulador
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MICROAGULHAMENTO -->
+    <section class="item-tratamento" style="padding: 30px; background: none;">
+        <div class="tratamento-foto">
+            <img src="src/images/tratamentos/Microagulhamento.jpg" alt="Sessão de microagulhamento facial para renovação cutânea">
+        </div>
+        <div class="tratamento-info">
+            <span class="section-tag">Estética Facial Avançada</span>
+            <h2>Microagulhamento</h2>
+            <div class="tratamento-meta">
+                <span><i class="fa-regular fa-clock"></i> Cerca de 50 min</span>
+                <span><i class="fa-solid fa-wand-magic-sparkles"></i> Renovação Tecidual</span>
+            </div>
+            <div class="tratamento-detalhes">
+                <p>Através de microagulhas estéreis, geram-se microcanais na pele que ativam o processo de cicatrização natural e facilitam a permeação profunda de ativos clareadores e nutrientes essenciais.</p>
+                <p><strong>Principais benefícios e indicações:</strong></p>
+                <ul>
+                    <li>Suavização marcante de cicatrizes de acne e linhas finas superficiais.</li>
+                    <li>Uniformização do tom da pele, auxiliando no controle de manchas e melasma.</li>
+                    <li>Estímulo intenso de colágeno para redução de poros abertos.</li>
+                </ul>
+            </div>
+            <div class="tratamento-action">
+                <div>
+                    <span style="font-size: 0.85rem; color: var(--texto-secundario); display: block;">Investimento:</span>
+                    <span class="preco">Sob Consulta</span>
+                </div>
+                <a href="https://wa.me/5511973894158?text=Olá!%20Gostaria%20de%20obter%20mais%20detalhes%20e%20agendar%20uma%20sessão%20de%20Microagulhamento." class="btn btn-primary" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Agendar Microagulhamento
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PEELING -->
+    <section class="item-tratamento" style="padding: 30px; background: none;">
+        <div class="tratamento-foto">
+            <img src="src/images/tratamentos/Peeling.jpg" alt="Aplicação de peeling químico facial para renovação da pele">
+        </div>
+        <div class="tratamento-info">
+            <span class="section-tag">Estética Facial Avançada</span>
+            <h2>Peeling</h2>
+            <div class="tratamento-meta">
+                <span><i class="fa-regular fa-clock"></i> Cerca de 40 min</span>
+                <span><i class="fa-solid fa-layer-group"></i> Troca Celular Controlada</span>
+            </div>
+            <div class="tratamento-detalhes">
+                <p>O peeling químico promove uma descamação controlada da epiderme através de ácidos específicos, removendo células mortas e revelando uma pele renovada, macia e iluminada.</p>
+                <p><strong>Principais benefícios e indicações:</strong></p>
+                <ul>
+                    <li>Clareamento de hiperpigmentações, manchas de sol e melasma.</li>
+                    <li>Melhoria da textura áspera da pele e atenuação de rugas finas.</li>
+                    <li>Controle da oleosidade excessiva e diminuição de episódios de acne.</li>
+                </ul>
+            </div>
+            <div class="tratamento-action">
+                <div>
+                    <span style="font-size: 0.85rem; color: var(--texto-secundario); display: block;">Investimento:</span>
+                    <span class="preco">Sob Consulta</span>
+                </div>
+                <a href="https://wa.me/5511973894158?text=Olá!%20Gostaria%20de%20obter%20mais%20detalhes%20e%20agendar%20uma%20sessão%20de%20Peeling." class="btn btn-primary" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Agendar Peeling
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIMPEZA DE PELE PROFUNDA -->
+    <section class="item-tratamento" style="padding: 30px; background: none;">
+        <div class="tratamento-foto">
+            <img src="src/images/tratamentos/Limpeza.de.pele.jpg" alt="Paciente recebendo tratamento de Limpeza de Pele Profunda">
+        </div>
+        <div class="tratamento-info">
+            <span class="section-tag">Manutenção & Saúde da Pele</span>
+            <h2>Limpeza de Pele Profunda</h2>
+            <div class="tratamento-meta">
+                <span><i class="fa-regular fa-clock"></i> Cerca de 1h30 min</span>
+                <span><i class="fa-solid fa-sparkles"></i> Protocolo premium</span>
+            </div>
+            <div class="tratamento-detalhes">
+                <p>Um tratamento essencial que vai muito além da estética: é saúde para o seu tissue cutâneo. Remove cravos, miliuns, células mortas e desintoxica profundamente os poros.</p>
+                <p><strong>O que está incluído no nosso protocolo:</strong></p>
+                <ul>
+                    <li>Higienização profunda e emoliência facilitada.</li>
+                    <li>Extração minuciosa com o mínimo de desconforto.</li>
+                    <li>Aplicação de alta frequência e máscara calmante/hidratante.</li>
+                </ul>
+            </div>
+            <div class="tratamento-action">
+                <div>
+                    <span style="font-size: 0.85rem; color: var(--texto-secundario); display: block;">Investimento:</span>
+                    <span class="preco">R$ 89,90</span>
+                </div>
+                <a href="https://wa.me/5511973894158?text=Olá!%20Quero%20cuidar%20da%20minha%20pele.%20Poderia%20me%20passar%20os%20horários%20disponíveis%20para%20uma%20Limpeza%20de%20Pele%20Profunda?" class="btn btn-primary" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Agendar Limpeza
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRP (REJUVENESCIMENTO COM PLASMA) -->
+    <section class="item-tratamento" style="padding: 30px; background: none;">
+        <div class="tratamento-foto">
+            <img src="src/images/tratamentos/Prp.facial.jpg" alt="Aplicação de Plasma Rico em Plaquetas (PRP) para rejuvenescimento">
+        </div>
+        <div class="tratamento-info">
+            <span class="section-tag">Estética Facial Avançada</span>
+            <h2>PRP (Plasma Rico em Plaquetas)</h2>
+            <div class="tratamento-meta">
+                <span><i class="fa-regular fa-clock"></i> Cerca de 60 min</span>
+                <span><i class="fa-solid fa-dna"></i> Fatores Biológicos Autólogos</span>
+            </div>
+            <div class="tratamento-detalhes">
+                <p>Tratamento regenerativo que utiliza as plaquetas do próprio sangue concentrado do paciente para liberar fatores de crescimento celular, estimulando a reestruturação natural da derme.</p>
+                <p><strong>Principais benefícios e indicações:</strong></p>
+                <ul>
+                    <li>Aceleração intensa da renovação e firmeza tecidual do rosto e pescoço.</li>
+                    <li>Suavização global de rugas finas, olheiras e marcas de expressão.</li>
+                    <li>Tratamento altamente seguro e natural, sem risco de rejeição alérgica.</li>
+                </ul>
+            </div>
+            <div class="tratamento-action">
+                <div>
+                    <span style="font-size: 0.85rem; color: var(--texto-secundario); display: block;">Investimento:</span>
+                    <span class="preco">Sob Consulta</span>
+                </div>
+                <a href="https://wa.me/5511973894158?text=Olá!%20Gostaria%20de%20obter%20mais%20detalhes%20e%20agendar%20uma%20avaliação%20para%20o%20procedimento%20de%20PRP." class="btn btn-primary" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Agendar PRP
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- DRENAGEM LINFÁTICA -->
+    <section class="item-tratamento" style="padding: 30px; background: none;">
+        <div class="tratamento-foto">
+            <img src="src/images/tratamentos/Drenagem.linfatica.jpg" alt="Massagem manual de drenagem linfática corporal">
+        </div>
+        <div class="tratamento-info">
+            <span class="section-tag">Estética Corporal Avançada</span>
+            <h2>Drenagem Linfática</h2>
+            <div class="tratamento-meta">
+                <span><i class="fa-regular fa-clock"></i> Cerca de 50 min</span>
+                <span><i class="fa-solid fa-person-running"></i> Redução de Inchaço</span>
+            </div>
+            <div class="tratamento-detalhes">
+                <p>Técnica de massagem com pressões suaves e ritmadas que direciona o excesso de líquidos corporais para o sistema linfático, agilizando a eliminação de toxinas acumuladas.</p>
+                <p><strong>Principais benefícios e indicações:</strong></p>
+                <ul>
+                    <li>Alívio imediato da retenção de líquidos e edemas nas pernas e abdômen.</li>
+                    <li>Indispensável no processo de pós-operatório de intervenções cirúrgicas.</li>
+                    <li>Estímulo da circulação de retorno, reduzindo a sensação de pernas pesadas.</li>
+                </ul>
+            </div>
+            <div class="tratamento-action">
+                <div>
+                    <span style="font-size: 0.85rem; color: var(--texto-secundario); display: block;">Investimento:</span>
+                    <span class="preco">Sob Consulta</span>
+                </div>
+                <a href="https://wa.me/5511973894158?text=Olá!%20Gostaria%20de%20agendar%20uma%20sessão%20de%20Drenagem%20Linfática." class="btn btn-primary" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Agendar Drenagem
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PEIM (TRATAMENTO DE VASINHOS) -->
+    <section class="item-tratamento" style="padding: 30px; background: none;">
+        <div class="tratamento-foto">
+            <img src="src/images/tratamentos/Peim.vasinhos.jpg" alt="Procedimento injetável PEIM para secagem de microvasos">
+        </div>
+        <div class="tratamento-info">
+            <span class="section-tag">Estética Corporal Avançada</span>
+            <h2>PEIM (Tratamento de Vasinhos)</h2>
+            <div class="tratamento-meta">
+                <span><i class="fa-regular fa-clock"></i> Cerca de 45 min</span>
+                <span><i class="fa-solid fa-syringe"></i> Secagem Estética</span>
+            </div>
+            <div class="tratamento-detalhes">
+                <p>O PEIM (Procedimento Estético Injetável para Microvasos) baseia-se na aplicação de glicose diretamente nos vasinhos dilatados superficiais, provocando o fechamento e desaparecimento deles.</p>
+                <p><strong>Principais benefícios e indicações:</strong></p>
+                <ul>
+                    <li>Eliminação de telangiectasias (vasinhos avermelhados ou arroxeados).</li>
+                    <li>Grande melhora no aspecto visual das pernas, elevando a autoestima.</li>
+                    <li>Método rápido, minimamente invasivo e com excelente recuperação.</li>
+                </ul>
+            </div>
+            <div class="tratamento-action">
+                <div>
+                    <span style="font-size: 0.85rem; color: var(--texto-secundario); display: block;">Investimento:</span>
+                    <span class="preco">Sob Consulta</span>
+                </div>
+                <a href="https://wa.me/5511973894158?text=Olá!%20Gostaria%20de%20obter%20mais%20detalhes%20e%20agendar%20uma%20avaliação%20para%20o%20PEIM%20(Tratamento%20de%20Vasinhos)." class="btn btn-primary" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Agendar PEIM
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUIROPRAXIA SEITAI -->
+    <section class="item-tratamento" style="padding: 30px; background: none;">
+        <div class="tratamento-foto">
+            <img src="src/images/tratamentos/quiropraxia.seitai.jpeg" alt="Sessão de Quiropraxia Seitai aplicada para alinhamento corporal">
+        </div>
+        <div class="tratamento-info">
+            <span class="section-tag">Terapias Integrativas</span>
+            <h2>Quiropraxia Seitai</h2>
+            <div class="tratamento-meta">
+                <span><i class="fa-regular fa-clock"></i> Cerca de 50 min</span>
+                <span><i class="fa-solid fa-hand-holding-medical"></i> Alinhamento postural</span>
+            </div>
+            <div class="tratamento-detalhes">
+                <p>O Seitai é uma técnica terapêutica japonesa que utiliza ferramentas e manobras precisas para ajustar e alinhar a coluna vertebral e as articulações do corpo humano.</p>
+                <p><strong>Ideal para o tratamento de:</strong></p>
+                <ul>
+                    <li>Dores crônicas nas costas, lombar e região cervical.</li>
+                    <li>Tensões e travamentos provocados pelo estresse e má postura.</li>
+                    <li>Restabelecimento do fluxo energético e mobilidade física plena.</li>
+                </ul>
+            </div>
+            <div class="tratamento-action">
+                <div>
+                    <span style="font-size: 0.85rem; color: var(--texto-secundario); display: block;">Investimento:</span>
+                    <span class="preco">R$ 159,90</span>
+                </div>
+                <a href="https://wa.me/5511973894158?text=Olá!%20Estou%20buscando%20alívio%20de%20dores/alinhamento.%20Gostaria%20de%20marcar%20uma%20sessão%20de%20Quiropraxia%20Seitai." class="btn btn-primary" target="_blank" rel="noopener">
+                    <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Agendar Quiropraxia
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MASSOTERAPIA -->
+    <section class="item-tratamento" style="padding: 30px; background: none;">
+            <div class="tratamento-foto">
+                <img src="src/images/tratamentos/Massoterapia.jpg" alt="Sessão de massoterapia corporal relaxante e terapêutica">
+            </div>
+            <div class="tratamento-info">
+                <span class="section-tag">Terapias Integrativas</span>
+                <h2>Massoterapia</h2>
+                <div class="tratamento-meta">
+                    <span><i class="fa-regular fa-clock"></i> Cerca de 60 min</span>
+                    <span><i class="fa-solid fa-spa"></i> Alívio de Tensões</span>
+                </div>
+                <div class="tratamento-detalhes">
+                    <p>Emprego de técnicas manuais profundas e deslizamentos vigorosos sobre o tecido muscular, com a finalidade de desfazer pontos de gatilho, reduzir dores físicas e induzir o bem-estar mental.</p>
+                    <p><strong>Principais benefícios e indicações:</strong></p>
+                    <ul>
+                        <li>Desativação de nós musculares dolorosos decorrentes de estresse.</li>
+                        <li>Redução da ansiedade cotidiana e promoção do relaxamento geral.</li>
+                        <li>Melhora na oxigenação do tecido muscular e na circulação periférica.</li>
+                    </ul>
+                </div>
+                <div class="tratamento-action">
+                    <div>
+                        <span style="font-size: 0.85rem; color: var(--texto-secundario); display: block;">Investimento:</span>
+                        <span class="preco">Sob Consulta</span>
+                    </div>
+                    <a href="https://wa.me/5511973894158?text=Olá!%20Gostaria%20de%20agendar%20uma%20sessão%20de%20Massoterapia%20para%20alívio%20de%20tensões." class="btn btn-primary" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Agendar Massoterapia
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- NATUROPATIA -->
+        <section class="item-tratamento" style="padding: 30px; background: none;">
+            <div class="tratamento-foto">
+                <img src="src/images/tratamentos/Naturopatia.jpg" alt="Atendimento clínico focado em Naturopatia integrativa">
+            </div>
+            <div class="tratamento-info">
+                <span class="section-tag">Terapias Integrativas</span>
+                <h2>Naturopatia</h2>
+                <div class="tratamento-meta">
+                    <span><i class="fa-regular fa-clock"></i> Cerca de 60 min</span>
+                    <span><i class="fa-solid fa-leaf"></i> Restauração Natural</span>
+                </div>
+                <div class="tratamento-detalhes">
+                    <p>Ciência integrativa que estuda o indivíduo de forma holística, utilizando métodos baseados na natureza, como fitoterapia e reeducação de hábitos para ativar o poder auto-regenerativo do organismo.</p>
+                    <p><strong>Principais benefícios e indicações:</strong></p>
+                    <ul>
+                        <li>Apoio integrativo e natural na modulação do estresse e insônia.</li>
+                        <li>Fortalecimento do sistema imune e reequilíbrio das funções metabólicas.</li>
+                        <li>Orientação preventiva focada em longevidade e qualidade de vida plena.</li>
+                    </ul>
+                </div>
+                <div class="tratamento-action">
+                    <div>
+                        <span style="font-size: 0.85rem; color: var(--texto-secundario); display: block;">Investimento:</span>
+                        <span class="preco">Sob Consulta</span>
+                    </div>
+                    <a href="https://wa.me/5511973894158?text=Olá!%20Gostaria%20de%20marcar%20uma%20consulta%20ou%20obter%20detalhes%20sobre%20a%20Naturopatia." class="btn btn-primary" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Agendar Naturopatia
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- OZONIOTERAPIA -->
+        <section class="item-tratamento" style="padding: 30px; background: none;">
+            <div class="tratamento-foto">
+                <img src="src/images/tratamentos/Ozonioterapia.jpg" alt="Sessão clínica de aplicação de Ozonioterapia medicinal">
+            </div>
+            <div class="tratamento-info">
+                <span class="section-tag">Terapias Integrativas</span>
+                <h2>Ozonioterapia</h2>
+                <div class="tratamento-meta">
+                    <span><i class="fa-regular fa-clock"></i> Cerca de 40 min</span>
+                    <span><i class="fa-solid fa-shield-halved"></i> Modulação Inflamatória</span>
+                </div>
+                <div class="tratamento-detalhes">
+                    <p>Aplicação terapêutica de uma mescla medicinal de oxigênio e ozônio. Atua de maneira contundente regulando as respostas inflamatórias, combatendo radicais livres e otimizando o fluxo sanguíneo.</p>
+                    <p><strong>Principais benefícios e indicações:</strong></p>
+                    <ul>
+                        <li>Ação analgésica expressiva em patologias articulares ou crônicas.</li>
+                        <li>Estímulo biológico para imunomodulação e aceleração da cicatrização.</li>
+                        <li>Aumento da oxigenação celular geral e combate à fadiga biológica.</li>
+                    </ul>
+                </div>
+                <div class="tratamento-action">
+                    <div>
+                        <span style="font-size: 0.85rem; color: var(--texto-secundario); display: block;">Investimento:</span>
+                        <span class="preco">Sob Consulta</span>
+                    </div>
+                    <a href="https://wa.me/5511973894158?text=Olá!%20Gostaria%20de%20obter%20mais%20detalhes%20e%20agendar%20uma%20sessão%20de%20Ozonioterapia." class="btn btn-primary" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Agendar Ozônio
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SOROTERAPIA -->
+        <section class="item-tratamento" style="padding: 30px; background: none;">
+            <div class="tratamento-foto">
+                <img src="src/images/tratamentos/Soroterapia.jpg" alt="Infusão endovenosa personalizada de soroterapia com ativos vitamínicos">
+            </div>
+            <div class="tratamento-info">
+                <span class="section-tag">Terapias Integrativas</span>
+                <h2>Soroterapia</h2>
+                <div class="tratamento-meta">
+                    <span><i class="fa-regular fa-clock"></i> Cerca de 45 min</span>
+                    <span><i class="fa-solid fa-bolt"></i> Nutrição Injetável Direta</span>
+                </div>
+                <div class="tratamento-detalhes">
+                    <p>Administração de soros customizados contendo vitaminas, minerais e antioxidantes por via endovenosa. Permite absorção imediata e integral (100%) dos ativos, sem perdas gástricas.</p>
+                    <p><strong>Principais benefícios e indicações:</strong></p>
+                    <ul>
+                        <li>Suplementação de micronutrientes para tratamento ágil de cansaço crônico.</li>
+                        <li>Melhoria acentuada do viço da pele, fortalecimento capilar e das unhas.</li>
+                        <li>Aceleração da desintoxicação biológica e reposição de eletrólitos essenciais.</li>
+                    </ul>
+                </div>
+                <div class="tratamento-action">
+                    <div>
+                        <span style="font-size: 0.85rem; color: var(--texto-secundario); display: block;">Investimento:</span>
+                        <span class="preco">Sob Consulta</span>
+                    </div>
+                    <a href="https://wa.me/5511973894158?text=Olá!%20Gostaria%20de%20obter%20detalhes%20sobre%20os%20coquetéis%20e%20agendar%20uma%20sessão%20de%20Soroterapia." class="btn btn-primary" target="_blank" rel="noopener">
+                        <i class="fab fa-whatsapp" style="margin-right: 8px;"></i> Agendar Soroterapia
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="src/images/logo/LOGO.KAVANAH.SEM.FUNDO5234.svg" alt="Logotipo da Kavanah Clínica">
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h3>Navegação</h3>
+                    <ul>
+                        <li><a href="index.html#produtos">Procedimentos</a></li>
+                        <li><a href="index.html#about">Sobre nós</a></li>
+                        <li><a href="index.html#parceiros">Equipe</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Redes Sociais</h3>
+                    <ul>
+                        <li><a href="https://www.instagram.com/kavanahclinica/" target="_blank" rel="noopener">Instagram <i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.facebook.com/profile.php?id=61582549000037" target="_blank" rel="noopener">Facebook <i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://wa.me/5511973894158?text=Olá!%20Gostaria%20de%20mais%20informações." target="_blank" rel="noopener">Whatsapp <i class="fab fa-whatsapp"></i></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Institucional</h3>
+                    <ul>
+                        <li><a href="privacidade.html">Política de Privacidade</a></li>
+                        <li><a href="termos.html">Termos de uso</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Kavanah Clínica. Todos os Direitos Reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        const menuLinks = document.querySelectorAll('.nav-menu a');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            icon.className = navMenu.classList.contains('active') ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+        });
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuToggle.querySelector('i').className = 'fa-solid fa-bars';
+            });
+        });
+    </script>
+</body>
+</html>
